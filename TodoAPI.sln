@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoAPI", "TodoAPI\TodoAPI.csproj", "{17E625CE-5075-4742-B687-9DEAE27416AC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TodoAPI.UnitTests", "TodoAPI.UnitTests\TodoAPI.UnitTests.csproj", "{1E9A68A5-CC6B-4531-A6C3-21BC278B1773}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{17E625CE-5075-4742-B687-9DEAE27416AC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{17E625CE-5075-4742-B687-9DEAE27416AC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{17E625CE-5075-4742-B687-9DEAE27416AC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{17E625CE-5075-4742-B687-9DEAE27416AC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1E9A68A5-CC6B-4531-A6C3-21BC278B1773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E9A68A5-CC6B-4531-A6C3-21BC278B1773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E9A68A5-CC6B-4531-A6C3-21BC278B1773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E9A68A5-CC6B-4531-A6C3-21BC278B1773}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,42 @@
+version: "3.5"
+
+services:
+  mongo:
+    image: mongo:4
+    restart: unless-stopped
+    container_name: mongo
+    ports:
+      - 27017:27017
+    networks:
+      - todo
+    environment:
+        MONGO_INITDB_ROOT_USERNAME: admin
+        MONGO_INITDB_ROOT_PASSWORD: tajnehaslo12345
+    expose:
+      - "27017"
+    volumes:
+      - ./mongodb:/data/db
+      - ./mongodb/log:/var/log/mongodb/
+    command: mongod --logpath /var/log/mongodb/mongod.log
+
+  todo-api:
+    container_name: todo-api
+    image: todo-api:latest
+    build:
+        context: .
+    networks:
+      - todo
+    expose:
+      - "5000"
+    links:
+      - mongo
+    depends_on:
+      - mongo
+    volumes:
+    - ./api/bin/appsettings.Production.json:/app/appsettings.Production.json
+    - ./api/bin/appsettings.json:/app/appsettings.json
+
+networks:
+  todo:
+    name: todo-network
+    external: true
